@@ -1,0 +1,40 @@
+/*!
+  Theme Name: wordpress_boilerplate_v2
+  Theme URI:
+  Author:
+  Author URI:
+  Description:
+  Version: 1.0
+  License:
+  License URI:
+  Text Domain: wordpress_boilerplate_v2
+  Tags: rtl-language-support
+*/
+
+// base
+@import "sass/base/normalize"; // normalize
+@import "sass/base/html5bp"; // html5bp useful defaults
+
+// sass
+@import "sass/mixins";
+@import "sass/variables";
+@import "sass/base/base";
+@import "sass/base/typography";
+@import "sass/base/forms";
+@import "sass/base/slider";
+@import "sass/base/wpcore";
+
+// layout
+@import "sass/layout/header";
+@import "sass/layout/footer";
+@import "sass/layout/tabs";
+@import "sass/layout/pages";
+
+// plugins
+@import "sass/plugins";
+
+// navigation
+@import "sass/navigation/navigation";
+
+// modules
+@import "sass/modules/buttons";

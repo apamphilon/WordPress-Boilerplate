@@ -1,0 +1,54 @@
+//fonts
+$main_font: 'Open Sans', sans-serif;
+
+//weights
+$bold: 700;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+	color: #444444;
+	font-family: $main_font;
+  -webkit-font-smoothing: antialiased;
+  @include font-size(16); // declares a default font-size
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+a {
+	@include transition(all ease-in-out 0.3s);
+}
+
+p {
+	margin-bottom: 30px;
+	@include font-size(16);
+}
+
+h1 {
+  font-size: 2em; // 32px
+}
+
+h2 {
+  font-size: 1.5em; // 24px
+}
+
+h3 {
+  font-size: 1.17em; // 18.72px
+}
+
+h4 {
+  font-size: 1em; // 16px
+}
+
+h5 {
+  font-size: 0.83em; // 13.28px
+}
+
+h6 {
+  font-size: 0.67em; // 10.72px
+}
