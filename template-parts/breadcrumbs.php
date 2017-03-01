@@ -2,7 +2,7 @@
 /**
  * Template part for displaying the breadcrumbs.
  *
- * @package wordpress_boilerplate_v2
+ * @package wordpress-boilerplate
  */
 
 ?>

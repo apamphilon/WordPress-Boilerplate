@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package wordpress_boilerplate_v2
+ * @package wordpress-boilerplate
  */
 
 ?>
@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php wordpress_boilerplate_v2_posted_on(); ?>
+			<?php wordpress-boilerplate_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -30,18 +30,18 @@
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'wordpress_boilerplate_v2' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'wordpress-boilerplate' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wordpress_boilerplate_v2' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wordpress-boilerplate' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php wordpress_boilerplate_v2_entry_footer(); ?>
+		<?php wordpress-boilerplate_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package wordpress_boilerplate_v2
+ * @package wordpress-boilerplate
  */
 
 get_header(); ?>

@@ -4,7 +4,7 @@
  *
  * Template name: homepage
  *
- * @package wordpress_boilerplate_v2
+ * @package wordpress-boilerplate
  */
 
 get_header(); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
         			the_content();
 
         			wp_link_pages( array(
-        				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wordpress_boilerplate_v2' ),
+        				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wordpress-boilerplate' ),
         				'after'  => '</div>',
         			) );
         		?>
@@ -37,7 +37,7 @@ get_header(); ?>
         				edit_post_link(
         					sprintf(
         						/* translators: %s: Name of current post */
-        						esc_html__( 'Edit %s', 'wordpress_boilerplate_v2' ),
+        						esc_html__( 'Edit %s', 'wordpress-boilerplate' ),
         						the_title( '<span class="screen-reader-text">"', '"</span>', false )
         					),
         					'<span class="edit-link">',

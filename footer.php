@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package wordpress_boilerplate_v2
+ * @package wordpress-boilerplate
  */
 
 ?>
