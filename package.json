@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/apamphilon/wordpress-boilerplate"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apamphilon/wordpress-boilerplate"
   },
   "license": "ISC",
   "devDependencies": {
@@ -20,7 +20,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.5.2",
+    "gulp-sourcemaps": "^2.4.1",
     "gulp-tinypng-compress": "^1.2.1",
     "gulp-uglify": "^1.4.1"
   }
