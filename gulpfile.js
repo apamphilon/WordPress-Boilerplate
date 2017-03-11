@@ -10,6 +10,7 @@ var sourceMaps = require('gulp-sourcemaps');		    // sourcemaps
 var autoprefixer = require('gulp-autoprefixer');	  // autoprefixr
 var sass = require('gulp-sass');					          // sass
 var browserSync = require('browser-sync').create(); // browserSync
+var babel = require("gulp-babel");                  // babel
 
 // tasks
 // concat + min js scripts
@@ -24,9 +25,12 @@ gulp.task('concatScripts', function() {
 			// include main.js
 			'js/main.js'
 		])
+  .pipe(sourcemaps.init())
+  .pipe(babel())
 	.pipe(plumber())
 	.pipe(gulpConcat('main.min.js'))
 	.pipe(gulpUglify())
+  .pipe(sourcemaps.write("."))
 	.pipe(gulp.dest('js'))
   .pipe(browserSync.stream());
 });
@@ -35,7 +39,7 @@ gulp.task('concatScripts', function() {
 gulp.task('compileSass', function() {
 	gulp.src('sass/style.scss')
 		// pipe sourcemaps to sass
-		.pipe(sourceMaps.init())
+		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		// .pipe(sass({outputStyle: 'compressed'}))
 		.pipe(sass())
@@ -45,7 +49,7 @@ gulp.task('compileSass', function() {
 			cascade: false
 		}))
 		// write sourcemaps
-		.pipe(sourceMaps.write('./'))
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./'))
     // reload browser
     .pipe(browserSync.stream());
