@@ -1,13 +1,13 @@
 <?php
 /**
- * wordpress-boilerplate functions and definitions.
+ * wordpress_boilerplate functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package wordpress-boilerplate
+ * @package wordpress_boilerplate
  */
 
-if ( ! function_exists( 'wordpress-boilerplate_setup' ) ) :
+if ( ! function_exists( 'wordpress_boilerplate_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'wordpress-boilerplate_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function wordpress-boilerplate_setup() {
+function wordpress_boilerplate_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on wordpress-boilerplate, use a find and replace
-	 * to change 'wordpress-boilerplate' to the name of your theme in all the template files.
+	 * If you're building a theme based on wordpress_boilerplate, use a find and replace
+	 * to change 'wordpress_boilerplate' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'wordpress-boilerplate', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wordpress_boilerplate', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -45,8 +45,8 @@ function wordpress-boilerplate_setup() {
 
 	// This theme uses wp_nav_menu().
 	register_nav_menus( array(
-    'primary' => esc_html__( 'Primary', 'wordpress-boilerplate' ),
-    'footer' => __( 'Footer Nav', 'wordpress-boilerplate' )
+    'primary' => esc_html__( 'Primary', 'wordpress_boilerplate' ),
+    'footer' => __( 'Footer Nav', 'wordpress_boilerplate' )
 	) );
 
 	/*
@@ -62,13 +62,13 @@ function wordpress-boilerplate_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'wordpress-boilerplate_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'wordpress_boilerplate_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
 endif;
-add_action( 'after_setup_theme', 'wordpress-boilerplate_setup' );
+add_action( 'after_setup_theme', 'wordpress_boilerplate_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -77,38 +77,38 @@ add_action( 'after_setup_theme', 'wordpress-boilerplate_setup' );
  *
  * @global int $content_width
  */
-function wordpress-boilerplate_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wordpress-boilerplate_content_width', 640 );
+function wordpress_boilerplate_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'wordpress_boilerplate_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'wordpress-boilerplate_content_width', 0 );
+add_action( 'after_setup_theme', 'wordpress_boilerplate_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function wordpress-boilerplate_widgets_init() {
+function wordpress_boilerplate_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'wordpress-boilerplate' ),
+		'name'          => esc_html__( 'Sidebar', 'wordpress_boilerplate' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'wordpress-boilerplate' ),
+		'description'   => esc_html__( 'Add widgets here.', 'wordpress_boilerplate' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'wordpress-boilerplate_widgets_init' );
+add_action( 'widgets_init', 'wordpress_boilerplate_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function wordpress-boilerplate_scripts() {
+function wordpress_boilerplate_scripts() {
   // style.css
-	wp_enqueue_style( 'wordpress-boilerplate-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wordpress_boilerplate-style', get_stylesheet_uri() );
 
   // skip link focus fix
-	wp_enqueue_script( 'wordpress-boilerplate-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'wordpress_boilerplate-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
   /*
    * If comments are enabled by the user, and we are on a post page,
@@ -128,12 +128,12 @@ function wordpress-boilerplate_scripts() {
   }
 
   // main.min.js
-  wp_enqueue_script( 'wordpress-boilerplate-main-min', get_template_directory_uri() . '/js/main.min.js', array ( 'jquery' ), 1, true);
+  wp_enqueue_script( 'wordpress_boilerplate-main-min', get_template_directory_uri() . '/js/main.min.js', array ( 'jquery' ), 1, true);
 
   // modernizr
-  wp_enqueue_script( 'wordpress-boilerplate-modernizr', get_template_directory_uri() . '/js/vendor/modernizr.min.js', '', '', '');
+  wp_enqueue_script( 'wordpress_boilerplate-modernizr', get_template_directory_uri() . '/js/vendor/modernizr.min.js', '', '', '');
 }
-add_action( 'wp_enqueue_scripts', 'wordpress-boilerplate_scripts' );
+add_action( 'wp_enqueue_scripts', 'wordpress_boilerplate_scripts' );
 
 /**
  * Custom template tags for this theme.

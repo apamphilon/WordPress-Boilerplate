@@ -1,5 +1,5 @@
 /*!
-  Theme Name: wordpress-boilerplate
+  Theme Name: wordpress_boilerplate
   Theme URI:
   Author:
   Author URI:
@@ -7,7 +7,7 @@
   Version: 1.0
   License:
   License URI:
-  Text Domain: wordpress-boilerplate
+  Text Domain: wordpress_boilerplate
   Tags: rtl-language-support
 */
 
@@ -38,3 +38,7 @@
 
 // modules
 @import "sass/modules/buttons";
+
+body {
+  background: green;
+}

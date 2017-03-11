@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package wordpress-boilerplate
+ * @package wordpress_boilerplate
  */
 
 ?>
@@ -35,7 +35,7 @@
   <![endif]-->
 
   <div id="page" class="site">
-  	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'wordpress-boilerplate' ); ?></a>
+  	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'wordpress_boilerplate' ); ?></a>
 
   	<header id="masthead" class="site-header" role="banner">
       <div class="wrapper">
